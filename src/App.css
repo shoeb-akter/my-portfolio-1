@@ -1,38 +1,182 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+:root{
+  --primary-white: #fff;
+  --primary-tomato: #ff6347;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  font-family: "Roboto Condenced" sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/****************************Menu Links**************************/
+nav{
+  z-index: 2;
+}
+nav a.nav-link{
+  letter-spacing: 0.037rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+nav ul li{
+  text-transform: uppercase;
+}
+.navbar-nav > li > a{
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+  border-top: 0.18rem solid black;
+}
+a{
+  color: var(--primary-white) !important;
+}
+.navbar-brand{
+  font-weight: 700;
+}
+.navbar-nav > li > a.active, .navbar-nav > li > a.active:focus{
+  border-top: 0.18rem solid var(--primary-tomato);
+}
+.navbar-nav > li > a:hover{
+  border-top: 0.18rem solid var(--primary-tomato);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*************************Header**************************/
+
+.header-wraper{
+  position: relative;
+  background: url("./images/bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 91vh;
+  filter: brightness(95%)
+}
+
+.main-info{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  font-family: "Roboto Condenced" sans-serif;
+  text-align: center;
+}
+.main-info h1{
+  color: tomato;
+  text-transform: uppercase;
+  font-weight: 650;
+  margin-top: 4rem;
+}
+.typed-text{
+  font-size: 2rem;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.btn-main-offer{
+  border: 2px solid orangered;
+  padding: 0.62rem 0.75rem 0.75rem 0.75rem;
+  border-radius: 0.3rem;
+  margin: 2rem;
+  font-weight: 400;
+  
+}
+.btn-main-offer:hover {
+  background-color: tomato;
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/**************Particles************/ 
+ 
+.tsparticles-canvas-el {
+  position: absolute;
+  height: 90vh;
+  width: 100vw;
+  z-index: 1;
+  pointer-events: none !important;
+}
+/***********About Me***********/
+
+.about-me{
+  background-color: black;
+  color: white;
+}
+.btn-about{
+  color: white;
+  background-color: tomato;
+  padding: 0.62rem 0.75rem 0.75rem 0.75rem;
+  border: 2px solid orangered;
+  border-radius: 0.3rem;
+  transition: all 1sec;
+}
+.btn-about:hover{
+  background-color: orangered;
+  transition: all 1sec;
+}
+.desc{
+  text-align: justify;
+}
+/***********Card*********/
+
+.card{
+  background: url("./images/projectbg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 70vh;
+  height: auto;
+
+}
+.image {
+  position: relative;
+  width: 25rem;
+}
+.image__img {
+  display: block;
+  width: 100%;
+}
+.image__overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-family: "Roboto Condenced" sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+.image__overlay:hover {
+  opacity: 1;
+}
+.image__overlay > * {
+  transform: translateY(20px);
+  transition: transform 0.25s;
+}
+.image__overlay:hover > *{
+  transform: translateY(0);
+}
+.image__title{
+  font-size: 2em;
+  font-weight: bold;
+}
+.image__description{
+  font-size: 1.25em;
+  margin-top: 0.25em;
+}
+/***********email*********/
+#email{
+  background: url("./images/email.jpg");
+  background-size: cover;
+  background-position: center;
+  height: auto;
+}
+.contact{
+  border: 2px solid white;
+  border-radius: 1rem;
+  padding: 0.62rem 0.75rem 0.75rem 0.75rem;
+  max-width: 15rem;
+  margin: auto;
+  background-color: #dc3545;
+  text-align: center;
+  color: white;
 }
